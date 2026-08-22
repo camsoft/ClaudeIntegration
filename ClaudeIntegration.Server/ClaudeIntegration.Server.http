@@ -1,0 +1,8 @@
+@ClaudeIntegration.Server_HostAddress = http://localhost:5246
+
+POST {{ClaudeIntegration.Server_HostAddress}}/api/claude/prompt
+Content-Type: application/json
+
+"What is the capital of France?"
+
+###

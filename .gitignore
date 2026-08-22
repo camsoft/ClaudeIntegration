@@ -1,0 +1,52 @@
+## .NET / Visual Studio
+[Bb]in/
+[Oo]bj/
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Visual Studio cache/options directory
+.vs/
+
+# NuGet
+*.nupkg
+**/packages/*
+!**/packages/build/
+project.lock.json
+project.fragment.lock.json
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Ll]og/
+[Ll]ogs/
+
+## Node / Vite / npm (client project)
+node_modules/
+dist/
+dist-ssr/
+*.local
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+## User-specific secrets (should never be committed)
+secrets.json
+*.pfx
+appsettings.*.local.json
+.env
+.env.*
+
+## OS files
+.DS_Store
+Thumbs.db
+
+## Editor/IDE
+.idea/
+*.swp

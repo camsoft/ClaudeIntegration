@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="ClaudeIntegration.Server/ClaudeIntegration.Server.csproj" />
+  <Project Path="claudeintegration.client/claudeintegration.client.esproj">
+    <Build />
+    <Deploy />
+  </Project>
+</Solution>
