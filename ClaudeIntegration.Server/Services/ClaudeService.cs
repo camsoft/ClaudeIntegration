@@ -31,12 +31,17 @@ namespace ClaudeIntegration.Server.Services
                 new WebSearchTool20250305 { MaxUses = 5 }
             };
 
+            // web_search_20250305: basic web search
+            // web_search_20260209: adds dynamic filtering
+            // web_search_20260318: adds response inclusion control for agentic workflows
+
             var parameters = new MessageCreateParams
-            {
-                Messages = messages,
-                MaxTokens = maxTokens,
-                Model = Model.ClaudeOpus4_8,
-                Tools = tools,
+                {
+                    Messages = messages,
+                    MaxTokens = maxTokens,
+                    Model = Model.ClaudeOpus4_8,
+                    Tools = tools,
+                    //Temperature = temperature
             };
 
             var response = await _anthropicClient.Messages.Create(parameters);
@@ -75,11 +80,21 @@ namespace ClaudeIntegration.Server.Services
                 }
             };
 
+            var tools = new List<ToolUnion>
+            {
+                new WebSearchTool20250305 { MaxUses = 5 }
+            };
+
+            // web_search_20250305: basic web search
+            // web_search_20260209: adds dynamic filtering
+            // web_search_20260318: adds response inclusion control for agentic workflows
+
             var parameters = new MessageCreateParams
             {
                 System = systemPrompt,
                 Messages = messages,
                 MaxTokens = maxTokens,
+                Tools = tools,
                 Model = Model.ClaudeOpus4_8,
                 //Model = Model.ClaudeFable5
                 //Model = Model.ClaudeSonnet5
